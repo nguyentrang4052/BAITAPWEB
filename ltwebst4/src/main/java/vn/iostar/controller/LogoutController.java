@@ -20,7 +20,7 @@ public class LogoutController extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		doPost(req,resp);
+		doPost(req, resp);
 	}
 
 	@Override
@@ -38,7 +38,7 @@ public class LogoutController extends HttpServlet {
 
 			}
 		}
-	
+
 		req.getRequestDispatcher("/views/topbar.jsp").forward(req, resp);
 //		resp.sendRedirect("/ltwebst4/views/topbar.jsp");
 	}

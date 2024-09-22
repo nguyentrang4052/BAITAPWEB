@@ -5,22 +5,21 @@ import vn.iostar.services.IUserService;
 import vn.iostar.dao.IUserDao;
 import vn.iostar.dao.impl.UserDaoimpl;
 
-public class UserServiceimpl implements IUserService{
+public class UserServiceimpl implements IUserService {
 	IUserDao userDao = new UserDaoimpl();
 
 	@Override
 	public UserModel login(String username, String password) {
 		UserModel user = this.findByUserName(username);
 		if (user != null && password.equals(user.getPassword())) {
-		return user;
+			return user;
 		}
 		return null;
 	}
 
 	@Override
 	public UserModel get(String username) {
-		// TODO Auto-generated method stub
-		return null;
+		return userDao.findByUserName(username);
 	}
 
 	@Override
@@ -30,7 +29,7 @@ public class UserServiceimpl implements IUserService{
 
 	@Override
 	public void insert(UserModel user) {
-		userDao.insert(user);	
+		userDao.insert(user);
 	}
 
 	@Override
@@ -40,7 +39,7 @@ public class UserServiceimpl implements IUserService{
 		}
 		long millis = System.currentTimeMillis();
 		java.sql.Date date = new java.sql.Date(millis);
-		userDao.insert(new UserModel(email,username,fullname,password,null,phone,date,1));
+		userDao.insert(new UserModel(email, username, fullname, password, null, phone, date, 1));
 		return true;
 	}
 
@@ -61,7 +60,11 @@ public class UserServiceimpl implements IUserService{
 
 	@Override
 	public void changePassword(String username, String password) {
-		userDao.changePassword(username, password);		
+		userDao.changePassword(username, password);
 	}
 
+	@Override
+	public void updateProfile(String fullname, String phone, String images, String username) {
+		userDao.updateProfile(fullname, phone, images, username);
+	}
 }

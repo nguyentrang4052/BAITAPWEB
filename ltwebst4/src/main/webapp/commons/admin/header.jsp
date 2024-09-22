@@ -332,7 +332,7 @@
 					</a>
 					<ul class="dropdown-menu dropdown-menu-default">
 						<li>
-							<a href="extra_profile.html">
+							<a href="/ltwebst4/views/upload.jsp">
 							<i class="icon-user"></i> My Profile </a>
 						</li>
 						<li>
@@ -358,7 +358,7 @@
 							<i class="icon-lock"></i> Lock Screen </a>
 						</li>
 						<li>
-							<a href="login.html">
+							<a href="/ltwebst4/logout">
 							<i class="icon-key"></i> Log Out </a>
 						</li>
 					</ul>

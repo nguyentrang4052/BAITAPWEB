@@ -128,13 +128,32 @@ public class UserDaoimpl implements IUserDao {
 		try {
 			conn = new DBConnectSQLServer().getConnection();
 			ps = conn.prepareStatement(query);
-			ps.setString(1,password);
-			ps.setString(2,username);
+			ps.setString(1, password);
+			ps.setString(2, username);
 			ps.executeQuery();
 			ps.close();
 			conn.close();
 		} catch (Exception e) {
 			e.printStackTrace();
-		}			
+		}
+	}
+
+	@Override
+	public void updateProfile(String fullname, String phone, String images, String username ) {
+		
+		String query = "update [user] set fullname=?, phone=?, images=?  where username=?";
+		try {
+			conn = new DBConnectSQLServer().getConnection();
+			ps = conn.prepareStatement(query);
+			ps.setString(1, fullname);
+			ps.setString(2, phone);
+			ps.setString(3, images);
+			ps.setString(4, username);
+			ps.executeQuery();
+			ps.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

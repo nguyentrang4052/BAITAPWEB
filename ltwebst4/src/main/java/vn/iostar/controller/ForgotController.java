@@ -21,23 +21,23 @@ public class ForgotController extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+
 		IUserService service = new UserServiceimpl();
-		
+
 		String user = req.getParameter("username");
 		String pass = req.getParameter("password");
 		boolean userExist = checkExistUsername(user);
-		String alertMsg="";
-			
+		String alertMsg = "";
+
 		if (userExist) {
-			service.changePassword(user, pass);	
+			service.changePassword(user, pass);
 			alertMsg = "Đổi mật khẩu thành công";
 			req.setAttribute("alert", alertMsg);
 			req.getRequestDispatcher("/views/login.jsp").forward(req, resp);
 		} else {
 			alertMsg = "Người dùng không tồn tại!!!";
 			req.setAttribute("alert", alertMsg);
-			req.getRequestDispatcher("/views/forgot.jsp").forward(req, resp);		
+			req.getRequestDispatcher("/views/forgot.jsp").forward(req, resp);
 		}
 	}
 

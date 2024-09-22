@@ -43,7 +43,7 @@ public class RegisterController extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setCharacterEncoding("UTF-8");
 		req.setCharacterEncoding("UTF-8");
-		
+
 		String email = req.getParameter("email");
 		String username = req.getParameter("username");
 		String fullname = req.getParameter("fullname");
@@ -74,7 +74,7 @@ public class RegisterController extends HttpServlet {
 			return;
 		}
 
-		boolean isSuccess = service.register(email,username,fullname,password,phone);
+		boolean isSuccess = service.register(email, username, fullname, password, phone);
 		if (isSuccess) {
 			req.setAttribute("alert", alertMsg);
 			resp.sendRedirect(req.getContextPath() + "/views/login.jsp");

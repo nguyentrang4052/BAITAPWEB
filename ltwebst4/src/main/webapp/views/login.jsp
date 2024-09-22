@@ -3,8 +3,6 @@
 
 <%@ page import="vn.iostar.ultis.Constant"%>
 
-
-
 <!-- BEGIN CONTENT -->
 <div class="col-md-9 col-sm-9">
 	<h1>Login</h1>

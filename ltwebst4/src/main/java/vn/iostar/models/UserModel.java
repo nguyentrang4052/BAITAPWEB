@@ -3,7 +3,7 @@ package vn.iostar.models;
 import java.io.Serializable;
 import java.sql.Date;
 
-public class UserModel implements Serializable{
+public class UserModel implements Serializable {
 
 	private static final long serialVersionUID = 6632144043145049098L;
 	private int id;
@@ -16,8 +16,8 @@ public class UserModel implements Serializable{
 	private Date createdate;
 	private int roleid;
 
-	
-	public UserModel(int id, String email, String username, String fullname, String password,String images, String phone, Date createdate, int roleid) {
+	public UserModel(int id, String email, String username, String fullname, String password, String images,
+			String phone, Date createdate, int roleid) {
 		super();
 		this.id = id;
 		this.email = email;
@@ -29,14 +29,13 @@ public class UserModel implements Serializable{
 		this.createdate = createdate;
 		this.roleid = roleid;
 	}
-	
 
 	public UserModel() {
 		// TODO Auto-generated constructor stub
 	}
 
-
-	public UserModel(String email, String username, String fullname, String password,String images, String phone, Date createdate, int roleid) {
+	public UserModel(String email, String username, String fullname, String password, String images, String phone,
+			Date createdate, int roleid) {
 		super();
 		this.email = email;
 		this.username = username;
@@ -55,15 +54,15 @@ public class UserModel implements Serializable{
 	public void setId(int id) {
 		this.id = id;
 	}
-	
+
 	public String getEmail() {
 		return email;
 	}
-	
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
+
 	public String getUsername() {
 		return username;
 	}
@@ -79,7 +78,7 @@ public class UserModel implements Serializable{
 	public void setFullname(String fullname) {
 		this.fullname = fullname;
 	}
-	
+
 	public String getPassword() {
 		return password;
 	}
@@ -99,25 +98,25 @@ public class UserModel implements Serializable{
 	public int getRoleid() {
 		return roleid;
 	}
-	
+
 	public void setRoleid(int roleid) {
 		this.roleid = roleid;
 	}
-	
+
 	public String getPhone() {
 		return phone;
 	}
-	
+
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	
+
 	public Date getCreatedate() {
 		return createdate;
 	}
-	
+
 	public void setCreatedate(Date createdate) {
 		this.createdate = createdate;
-	}	
-	
+	}
+
 }
