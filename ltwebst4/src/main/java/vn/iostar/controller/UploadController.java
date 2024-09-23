@@ -26,7 +26,7 @@ public class UploadController extends HttpServlet{
 
 		private String getFileName(Part part) {
 			for (String content : part.getHeader("content-disposition").split(";")) {
-				if (content.trim().startsWith("fullname"))
+				if (content.trim().startsWith("filename"))
 					return content.substring(content.indexOf("=") + 2, content.length() - 1);
 			}
 			return Constant.DEFAULT_FILENAME;
