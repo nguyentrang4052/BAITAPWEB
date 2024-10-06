@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="jakarta.tags.core"%>
-<c:url value = "/" var = "URL"></c:url>
+<c:url value="/" var="URL"></c:url>
 
 <!-- BEGIN TOP BAR -->
 <div class="pre-header">
@@ -36,7 +36,7 @@
 					<li><a href="shop-account.html">My Account</a></li>
 					<li><a href="shop-wishlist.html">My Wishlist</a></li>
 					<li><a href="shop-checkout.html">Checkout</a></li>
-					<li><a href="/ltwebst4/login">Log In</a></li>
+					<li><a href ="${pageContext.request.contextPath }/login">Log In</a></li>
 				</ul>
 			</div>
 			<!-- END TOP BAR MENU -->

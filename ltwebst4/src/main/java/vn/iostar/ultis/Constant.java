@@ -7,4 +7,5 @@ public class Constant {
 	
 	public static final String UPLOAD_DIRECTORY = "E:\\upload";
 	public static final String DEFAULT_FILENAME = "default.file";
+	
 }

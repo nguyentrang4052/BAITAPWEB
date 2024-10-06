@@ -234,10 +234,33 @@
 			<!-- END SIDEBAR -->
 			<!-- BEGIN CONTENT -->
 			<div class="col-md-9 col-sm-8">
-				<h2>Three items</h2>
+				<div style="height: 300px ; overflow-y: auto ; border: 1px solid #ccc;">
+				<table border="1" , width=100%>
+						<tr>
+							<th>STT</th>
+							<th>Images</th>
+							<th>CategoryName</th>
+
+						</tr>
+						<c:forEach items="${listcate}" var="cate" varStatus="STT">
+							<tr>
+								<td>${STT.index+1 }</td>
+
+								<td><c:if test="${cate.images.substring(0,5)  != 'https'}">
+										<c:url value="/image?fname=${cate.images}" var="imgUrl"></c:url>
+									</c:if> <c:if test="${cate.images.substring(0,5)  == 'https'}">
+										<c:url value="${cate.images}" var="imgUrl"></c:url>
+									</c:if> <img height="150" width="200" src="${imgUrl}" /></td>
+								<td>${cate.categoryname }</td>
+
+							</tr>
+						</c:forEach>
+
+					</table>
+				</div>
 				<div class="owl-carousel owl-carousel3">
 					<div>
-						<div class="product-item">
+					<!--  <div class="product-item">
 							<div class="pi-img-wrapper">
 								<img src="${URL}assets/frontend/pages/img/products/k1.jpg"
 									class="img-responsive" alt="Berry Lace Dress">
@@ -350,7 +373,7 @@
 							</h3>
 							<div class="pi-price">$29.00</div>
 							<a href="#" class="btn btn-default add2cart">Add to cart</a>
-						</div>
+						</div>-->
 					</div>
 				</div>
 			</div>

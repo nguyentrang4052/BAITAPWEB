@@ -7,7 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Trang chủ</h1>
+	<!-- <h1>Trang chủ</h1>
 	<a href="/RegisterLogin/logout">Đăng xuất</a>
+	 -->
+
 </body>
 </html>
