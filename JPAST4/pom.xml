@@ -89,6 +89,11 @@
 		</dependency>
 
 
+		<dependency>
+			<groupId>vn.iostar</groupId>
+			<artifactId>ltwebst4</artifactId>
+			<version>1.1.0</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
